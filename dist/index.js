@@ -113,11 +113,33 @@ class Player {
         this.height = height;
         this.weight = weight;
         this.power = power;
-        this.getMyHeight = () => {
-            return this.height;
-        };
+        this.id = String(Math.random() * 10);
     }
+    // getMyHeight = () => {
+    //   return this.height;
+    // };
+    get getMyHeight() {
+        return this.height;
+    }
+    ;
 }
-const nihal = new Player(20, 12);
+const nihal = new Player(20, 12, 30);
 // nihal.height
-console.log(nihal.getMyHeight());
+// class Player2 extends Player {
+//   special: boolean;
+//   constructor(height: number, weight: number, power: number, special: boolean) {
+//     super(height, weight, power);
+//     this.special = special;
+//   }
+//   // getPower = () => {
+//   //   return this.power;
+//   // };
+//   getPower = () => this.power;
+// }
+// // const nihal = new Player(20, 12);
+// const nihal = new Player2(20, 12, 30, true);
+// console.log(nihal.getMyHeight());
+// console.log("weight", nihal.weight);
+// console.log("special", nihal.special);
+// console.log("power", nihal.getPower());
+// console.log("id", nihal.id);
